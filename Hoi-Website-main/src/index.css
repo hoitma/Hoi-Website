@@ -1,0 +1,112 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Rock+Salt&display=swap');
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 220 30% 12%;
+
+    --card: 40 30% 98%;
+    --card-foreground: 220 30% 12%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 220 30% 12%;
+
+    --primary: 225 60% 38%;
+    --primary-foreground: 40 33% 96%;
+
+    --secondary: 25 80% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 25 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 225 60% 38%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 40 30% 97%;
+    --sidebar-foreground: 220 30% 12%;
+    --sidebar-primary: 225 60% 38%;
+    --sidebar-primary-foreground: 40 33% 96%;
+    --sidebar-accent: 40 20% 92%;
+    --sidebar-accent-foreground: 220 30% 12%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 225 60% 38%;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 40 20% 92%;
+
+    --card: 220 30% 10%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 220 30% 10%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 225 60% 60%;
+    --primary-foreground: 220 30% 8%;
+
+    --secondary: 25 80% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 25 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 225 60% 60%;
+
+    --sidebar-background: 220 30% 8%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 225 60% 60%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 220 20% 14%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 225 60% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+  }
+}
