@@ -49,15 +49,19 @@ const experiences = [
 "use client";
 
 import { useState } from "react";
+import { useScrollPop } from "./ui/useScrollPop";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
-export function WorkExperience() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { ref, isVisible, animationClass } = useScrollPop();
 
   return (
     <section id="experience" className="py-24 px-6 bg-neutral-50">
-      <div className="w-full max-w-5xl mx-auto">
+      <div
+        ref={ref as any}
+        className={`w-full max-w-5xl mx-auto transition-all duration-700 ${isVisible ? animationClass : 'opacity-0 translate-y-10'}`}
+      >
         {/* Section Header */}
         <p className="text-sm text-violet-600 mb-6 text-center">
           Across pre-seed startup, e-commerce and impact VC
@@ -188,5 +192,3 @@ export function WorkExperience() {
     </section>
   );
 }
-
-export default WorkExperience;

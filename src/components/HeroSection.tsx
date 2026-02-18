@@ -1,13 +1,18 @@
+
 import mountainArtwork from "@/components/assets/mountain.png";
 import hoi from "@/components/assets/hoi.png";
+import { useScrollPop } from "./ui/useScrollPop";
 
 export function HeroSection() {
+  const { ref, isVisible, animationClass } = useScrollPop();
   return (
     <section
       id="home"
       className="flex min-h-screen items-center justify-center bg-background px-6 py-12">
-      <div className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-background px-8 py-10 md:px-16 md:py-14">
-
+      <div
+        ref={ref as any}
+        className={`relative w-full max-w-5xl overflow-hidden rounded-2xl bg-background px-8 py-10 md:px-16 md:py-14 transition-all duration-700 ${isVisible ? animationClass : 'opacity-0 translate-y-10'}`}
+      >
         {/* Main content area */}
         <div className="flex items-baseline gap-6">
           {/* Image */}
@@ -33,11 +38,10 @@ export function HeroSection() {
               </h3>
             </div>
 
-
             {/* Description */}
             <p className="font-montserrat text-muted-foreground text-xs sm:text-sm mt-6 leading-relaxed">
               Bringing a background in Business Development, Marketing and Ops.
-              {" "} 
+              {" "}
               Believer in the 80/20 rule: Invest time in building the right structures and automations for the critical 20% that drives 80% of your results.
             </p>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useScrollPop } from "./ui/useScrollPop";
 import TwoHearts from "@/components/assets/image-2hearts.png";
 import DTM from "@/components/assets/image-dtm.jpg";
 import Stand from "@/components/assets/image-stand.jpg";
@@ -35,8 +36,8 @@ const projects = [
   },
 ];
 
-export function OtherProjects() {
   const [selectedCategory, setSelectedCategory] = useState<typeof categories[number]>('All');
+  const { ref, isVisible, animationClass } = useScrollPop();
 
   const filteredProjects = selectedCategory === 'All' 
     ? projects 
@@ -44,7 +45,10 @@ export function OtherProjects() {
 
   return (
     <section id="projects" className="py-24 px-6 bg-card">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[240px_1fr] gap-12">
+      <div
+        ref={ref as any}
+        className={`max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[240px_1fr] gap-12 transition-all duration-700 ${isVisible ? animationClass : 'opacity-0 translate-y-10'}`}
+      >
         {/* Sidebar */}
         <div>
           <h3 className="font-bold text-foreground mb-2">About</h3>
@@ -104,7 +108,4 @@ export function OtherProjects() {
         </div>
       </div>
     </section>
-  );
-}
-
-export default OtherProjects;
+  );}

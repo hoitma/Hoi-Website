@@ -28,10 +28,15 @@ const tools = [
   'Meta Business Suite'
 ];
 
+import { useScrollPop } from "./ui/useScrollPop";
 export function SkillsSection() {
+  const { ref, isVisible, animationClass } = useScrollPop();
   return (
     <section id="skills" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div
+        ref={ref as any}
+        className={`max-w-6xl mx-auto transition-all duration-700 ${isVisible ? animationClass : 'opacity-0 translate-y-10'}`}
+      >
         <h2 className="text-center text-4xl md:text-5xl text-foreground mb-14">
           Skills
         </h2>
