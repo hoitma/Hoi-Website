@@ -53,6 +53,7 @@ import { useScrollPop } from "./ui/useScrollPop";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
+export function WorkExperience() {
   const [activeIndex, setActiveIndex] = useState(0);
   const { ref, isVisible, animationClass } = useScrollPop();
 

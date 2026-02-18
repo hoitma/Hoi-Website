@@ -53,8 +53,8 @@ export function SkillsSection() {
                     i < languages.length - 1 ? "border-b border-border" : ""
                   }`}
                 >
-                  <span className="text-foreground">{l.name}</span>
-                  <span className="text-muted-foreground text-sm">{l.level}</span>
+                  <span className="text-foreground text-xs">{l.name}</span>
+                  <span className="text-muted-foreground text-xs">{l.level}</span>
                 </div>
               ))}
             </div>

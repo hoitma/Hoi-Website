@@ -36,6 +36,7 @@ const projects = [
   },
 ];
 
+export function OtherProjects() {
   const [selectedCategory, setSelectedCategory] = useState<typeof categories[number]>('All');
   const { ref, isVisible, animationClass } = useScrollPop();
 
@@ -108,4 +109,5 @@ const projects = [
         </div>
       </div>
     </section>
-  );}
+  );
+}
