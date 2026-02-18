@@ -48,7 +48,7 @@ export function HeroSection() {
             {/* Buttons */}
             <div className="flex gap-3 mt-6">
               <a
-                href="https://docs.google.com/document/d/1bAMxBam6dH7mII0Xq4mAp3Lgn7wKgHcEB0-dWH6hTdo/edit?usp=sharing"
+                href="https://drive.google.com/file/d/1OAsQjL8DxiJZ7uYJDXE2U8a6iGBwcgk3/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-dm-serif bg-foreground text-background text-xs sm:text-sm px-5 sm:px-7 py-2.5 sm:py-3 rounded-full hover:opacity-90 transition-opacity tracking-wide"
